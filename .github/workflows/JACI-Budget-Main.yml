@@ -1,1 +1,36 @@
+# .github/workflows/firebase-hosting-deploy.yml
+
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main # This workflow will run every time you push code to the 'main' branch.
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest # The type of virtual machine that the job will run on.
+
+    steps:
+      - name: Checkout Code # Step 1: Clone your repository into the virtual machine.
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js # Step 2: Install Node.js, essential for React and npm.
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Use a stable Node.js LTS version (e.g., 18.x or 20.x).
+
+      - name: Install Dependencies # Step 3: Install all project dependencies defined in package.json.
+        run: npm ci # 'npm ci' is preferred over 'npm install' in CI environments for speed and reliability.
+
+      - name: Build React App # Step 4: Create a production build of your React application.
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting # Step 5: Deploy the built application to Firebase Hosting.
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}' # GitHub's default token for actions.
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JACIBUDGETAPP }}' # This is a secret you MUST create.
+          channelId: live # Deploys to the live channel (your main site).
+          projectId: jaci-budgeting-app # Your Firebase Project ID, derived from your web.app URL.
 
