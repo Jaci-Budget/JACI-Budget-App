@@ -32,4 +32,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}' # GitHub's default token for actions.
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_JACIBUDGETAPP }}' # This is a secret you MUST create.
           channelId: live # Deploys to the live channel (your main site).
-          projectId: jaci-budgeting-app # Your Firebase Project ID, derived from your web.app URL.
+          projectId: jaci-budget-app # Your Firebase Project ID, derived from your web.app URL.
