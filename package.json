@@ -1,5 +1,6 @@
 {
   "name": "jaci-budget-app",
+  "homepage": "https://jaci-budget.github.io/JACI-Budget-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
