@@ -1,9 +1,9 @@
 {
-  "name": "jaci-budget-app",
-  "homepage": "https://jaci-budget.github.io/JACI-Budget-App",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+    "name": "jaci-budget-app",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://www.google.com/search?q=https://jaci-budget.github.io/JACI-Budget-App",
+    "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
