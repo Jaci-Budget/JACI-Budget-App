@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script>
+      // Get the full URL path, including the repository name.
+      const path = window.location.pathname;
+
+      // This is a simple redirect to the index.html page.
+      // The React router will then handle the path correctly.
+      // This is needed for direct access or refreshes on sub-pages.
+      window.location.replace('/JACI-Budget-App');
+    </script>
+  </head>
+  <body>
+    <!-- A small message for clarity while the redirect happens -->
+    <p>Redirecting to the correct page...</p>
+  </body>
+</html>
